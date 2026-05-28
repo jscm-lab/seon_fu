@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"D:\\\\100 제안서 DB\" -Recurse -Depth 2 -ErrorAction SilentlyContinue | Where-Object { $_.Extension -match \"hwpx?|docx|xlsx|pdf\" } | Select-Object FullName -First 30)",
+      "PowerShell($xml = Get-Content \"D:\\\\ax\\\\.tmp_hwpx\\\\Contents\\\\section0.xml\" -Raw; Write-Output \\(\"총 길이: \" + $xml.Length + \" chars\"\\); Write-Output \\(\"줄 수: \" + \\($xml -split \"`n\"\\).Count\\); Write-Output \\(\"<hp:tbl> 개수: \" + \\([regex]::Matches\\($xml, '<hp:tbl '\\)\\).Count\\); Write-Output \\(\"<hp:tr> 개수: \" + \\([regex]::Matches\\($xml, '<hp:tr '\\)\\).Count\\); Write-Output \\(\"<hp:tc> 개수: \" + \\([regex]::Matches\\($xml, '<hp:tc '\\)\\).Count\\))",
+      "PowerShell(\"cleaned\")",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__list_organizations",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__list_projects",
+      "mcp__300e4932-42f6-4189-af45-4033b38966ee__list_teams",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__list_tables",
+      "mcp__300e4932-42f6-4189-af45-4033b38966ee__list_projects",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__apply_migration",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__execute_sql",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__get_project_url",
+      "mcp__b8e56f61-eb8a-4984-a3c1-7a7229dcd4be__get_publishable_keys",
+      "Read(//c/Users/user/AppData/Local/Temp/claude/D--ax/addb28fe-b606-4820-afa2-fdb37e24b319/tasks/**)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
+    ]
+  }
+}
